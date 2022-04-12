@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- You do not need to make any changes to this file, but
+	you should still review the tags to make sure that you
+	are famipar with them. -->
+
+<html lang="en">
+<!-- All of the meta data for the page belongs in the header tag -->
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8NJPXPBWB9"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-8NJPXPBWB9');
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- pnk to the favicon image -->
+	<link rel="icon" href="images/dish.png">
+	<!-- pnk to the reset file -->
+	<link rel="stylesheet" href="css/html5reset.css">
+	<link rel="stylesheet" href="scss/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<title>Mindful Eating</title>
+</head>
+
+<body>
+	<header>
+		<nav class="navbar">
+			<ul>
+				<!-- Since I am on the index file I added class = action to the pnk to index. -->
+				<li><a href="index.html">What is mindful eating?</a></li>
+				<li><a href="exercise.html">How to do mindful eating?</a></li>
+				<li><a href="more.html">More About Eating Healthily</a></li>
+				<li><a href="boostrap.html">Eater Types</a></li>
+				<li><a href="reference.html">Reference</a></li>
+				<li class="current-page"><a href="form.html">Contact Me</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main class="form-page">
+		<div class="wrapper">
+			<form class="form" action="https://formspree.io/f/xwkyqobo" method="POST">
+				<div class="pageTitle title">Contact Me</div>
+				<div class="secondaryTitle title">Please fill this form to contact me.</div>
+				<label for="name" class="title">Name</label>
+				<input type="text" class="name formEntry" placeholder="Name" name="name" id="name" />
+				<label for="email" class="title">Email</label>
+				<input type="text" class="email formEntry" placeholder="Email" name="email" id="email" />
+				<label for="message" class="title">Leave A Message</label>
+				<textarea class="message formEntry" placeholder="Message" name="message" id="message"></textarea>
+				<label for="checkbox" class="title">Agree Terms of Use and Privacy Policy</label>
+				<input type="checkbox" class="termsConditions" value="Term" name="term" id="checkbox">
+				<label style="color: #2C3E50"> I Accept the <span style="color: #0E3750">Terms of Use</span> & <span
+						style="color: #0E3750">Privacy Policy</span>.</label><br>
+				<button class="submit formEntry" onclick="thanks()">Submit</button>
+			</form>
+		</div>
+
+	</main>
+	<!-- 	<footer>
+		<p>Lavender Li &copy; 2022</p>
+		<p>Powered with <i class="fab fa-github"></i></p>
+	</footer> -->
+</body>
+
+</html>

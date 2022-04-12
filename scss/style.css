@@ -1,0 +1,447 @@
+main {
+  background-image: url(../images/pink-background.jpg);
+  -webkit-filter: grayscale(5%);
+          filter: grayscale(5%);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 42px;
+  line-height: 1.1;
+  padding: 2.5rem 12px 0rem 15px;
+  font-family: 'Roboto Slab', sans-serif;
+  letter-spacing: -.5px;
+  margin-bottom: 1.5rem;
+  word-break: break-word;
+  margin: 0 40px 20px 40px;
+  font-weight: bolder;
+}
+
+h2 {
+  font-size: 30px;
+  padding: 5px 12px 12px 15px;
+  font-family: 'Roboto Slab', sans-serif;
+  letter-spacing: .5px;
+  font-weight: bold;
+  margin: 40px 40px 20px 40px;
+}
+
+h3 {
+  font-size: 25px;
+  padding: 5px 12px 20px 5px;
+  margin: 40px 40px 20px 40px;
+  letter-spacing: .5px;
+  font-weight: bold;
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+p {
+  font-size: 22px;
+  font-family: 'Roboto Slab', sans-serif;
+  padding: 12px;
+  color: #2c3e50;
+  line-height: 1.5;
+  text-align: justify;
+  letter-spacing: 0.5px;
+  margin: 20px 40px 0 40px;
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+a {
+  font-size: 22px;
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+li {
+  font-size: 20px;
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+.navbar li {
+  background-color: #f0c9cf;
+  font-family: 'Roboto Slab', sans-serif;
+  padding: 12px;
+  border: 1px solid lavender;
+}
+
+.navbar li a {
+  text-decoration: none;
+}
+
+.current-page {
+  text-decoration: underline;
+}
+
+.list-group {
+  padding-bottom: 3rem;
+}
+
+footer {
+  background-color: #f0c9cf;
+  padding: 32px 8px;
+}
+
+.eater-types {
+  line-height: 1.5em;
+  padding: 0 0 15px 0;
+}
+
+.eater-type {
+  padding: 3px 0 2px 25px;
+  color: #2c3e50;
+  line-height: 30px;
+  text-align: justify;
+  letter-spacing: 1px;
+}
+
+/* Add style to your images focusing on the box model. */
+.gallery {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.grid {
+  /*    display: inline-block; */
+  border: 4px solid lavenderblush;
+  /* max-width: 100%; */
+  /* height: auto */
+  padding: 30px auto;
+  text-align: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+
+/* grid display */
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  /* grid-template-columns: auto auto auto;
+	grid-template-rows: auto; */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* grid-template-columns: repeat(4, 1fr); */
+}
+
+/* flex display */
+.flex-container {
+  /* Arrange children using flexbox */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* ALlow images to display on multiple lines rather than a single line */
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /* Container should take up only 90% of the browser, leave 5% space on each side */
+  width: 90%;
+  /* Center container */
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex {
+  /* images display inline by default and act like text. We want them to act like divs, so display block */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* our width setting for mobile, one image per line */
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  min-width: 100px;
+  height: auto;
+  /* provide some space between our images */
+  margin: 10px;
+  border: 3px dashed #ADD8E6;
+  -webkit-box-shadow: 3px 3px 8px 0px #c29cc0;
+          box-shadow: 3px 3px 8px 0px #c29cc0;
+  /* ensure padding doesn't cause images to wrap, it should be within the width rather than in addition */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media only screen and (min-width: 640px) {
+  .flex {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+/* three images per line when browser width exceeds 960px */
+@media only screen and (min-width: 960px) {
+  .flex {
+    -ms-flex-preferred-size: 33.333%;
+        flex-basis: 33.333%;
+  }
+}
+
+/* four images per line when browser width exceeds 1280px */
+@media only screen and (min-width: 1280px) {
+  .flex {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+  }
+}
+
+/* five images per line when browser width exceeds 1600px */
+@media only screen and (min-width: 1600px) {
+  .flex {
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+  }
+}
+
+.text {
+  padding: 20px;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  .cover-img {
+    -webkit-animation: drop-in 2000ms;
+            animation: drop-in 2000ms;
+  }
+  @-webkit-keyframes drop-in {
+    from {
+      -webkit-transform: rotate(-30deg) translateY(-100%);
+              transform: rotate(-30deg) translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      -webkit-transform: rotate(0deg) translateY(0%);
+              transform: rotate(0deg) translateY(0%);
+      opacity: 1;
+    }
+  }
+  @keyframes drop-in {
+    from {
+      -webkit-transform: rotate(-30deg) translateY(-100%);
+              transform: rotate(-30deg) translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      -webkit-transform: rotate(0deg) translateY(0%);
+              transform: rotate(0deg) translateY(0%);
+      opacity: 1;
+    }
+  }
+}
+
+.cover {
+  padding: 20px 0 0 0;
+}
+
+.cover-img {
+  max-width: 400px;
+}
+
+/* Add a hover style to your images */
+img:hover {
+  border: 4px dashed lightblue;
+}
+
+img:nth-child(3n+0):hover {
+  border: 4px dashed purple;
+}
+
+/* Form Style */
+.form-page {
+  background-image: none;
+  background-color: #FFC0CB;
+}
+
+#title-Tag-Line {
+  font-size: 20px;
+}
+
+/* form animation starts */
+.form {
+  background: #fff;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+          box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+  border-radius: 5px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  border-top: 5px solid #e77c8e;
+  -webkit-animation: bounce 1.5s infinite;
+          animation: bounce 1.5s infinite;
+}
+
+::-webkit-input-placeholder {
+  font-size: 1.3em;
+}
+
+.title {
+  display: block;
+  font-family: 'Roboto Slab', sans-serif;
+  margin: 10px auto 5px;
+  width: 300px;
+}
+
+.termsConditions {
+  margin: 0 auto 5px 80px;
+}
+
+.pageTitle {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.secondaryTitle {
+  color: #2C3E50;
+}
+
+.name {
+  background-color: #ebebeb;
+  color: white;
+}
+
+.name:hover {
+  border-bottom: 5px solid #e77c8e;
+  height: 30px;
+  width: 380px;
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
+}
+
+.email {
+  background-color: #ebebeb;
+  height: 2em;
+}
+
+.email:hover {
+  border-bottom: 5px solid #e77c8e;
+  height: 30px;
+  width: 380px;
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
+}
+
+.message {
+  background-color: #ebebeb;
+  overflow: hidden;
+  height: 10rem;
+}
+
+.message:hover {
+  border-bottom: 5px solid #e77c8e;
+  height: 12em;
+  width: 380px;
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
+}
+
+.formEntry {
+  display: block;
+  margin: 30px auto;
+  /* min-width: 300px; */
+  padding: 10px;
+  border-radius: 2px;
+  border: none;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.submit {
+  width: 200px;
+  color: white;
+  background-color: #e77c8e;
+  font-size: 20px;
+}
+
+.submit:hover {
+  -webkit-box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+          box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  width: 300px;
+  border-top: 5px solid #0e3750;
+  border-radius: 0%;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    tranform: translate(0, 4px);
+  }
+  50% {
+    -webkit-transform: translate(0, 8px);
+            transform: translate(0, 8px);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    tranform: translate(0, 4px);
+  }
+  50% {
+    -webkit-transform: translate(0, 8px);
+            transform: translate(0, 8px);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  main {
+    background-image: url(../images/pink-background.jpg);
+    -webkit-filter: grayscale(5%);
+            filter: grayscale(5%);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .formEntry {
+    display: block;
+    margin: 30px auto;
+    /* 	  min-width: 300px; */
+    padding: 10px;
+    border-radius: 2px;
+    border: none;
+    -webkit-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+  }
+  /* flex display */
+  .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* flex-direction: column; */
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.benefits li {
+  list-style-type: circle;
+  font-size: 22px;
+  font-family: 'Roboto Slab', sans-serif;
+  padding: 12px;
+  color: #2c3e50;
+  text-align: justify;
+  letter-spacing: 0.5px;
+  margin: 0 40px 0 70px;
+}
+/*# sourceMappingURL=style.css.map */
